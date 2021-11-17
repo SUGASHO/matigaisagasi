@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <title>間違い探しゲーム！</title>
+</head>
+<body>
+    <h1>間違い探しゲーム！</h1>
+    <div class="score">
+        Time:
+        <span id="time">0</span>
+    </div>
+    <button type="button" onclick="init()">ゲーム開始</button>
+    <div id="cells"></div>
+
+    <script src="ncmb_js-3.1.2/ncmb.min.js"></script>
+    <script src="js/init.js"></script>
+    <script src="js/game.js"></script>
+    <script>
+    const APPLICATION_KEY = "6dfdb5d75165f8d576a61c6728baba5a2146138713aefabaafa762dbdb92ef13";
+    const CLIENT_KEY = "813614bbb942b8a349e279085e593a008d853b0b4b7e2a53477375ffac5b9bb8";
+    const ncmb = new NCMB(APPLICATION_KEY,CLIENT_KEY);
+    const DBName = "TestClass";
+
+    let TestClass = ncmb.DataStore(DBName);
+    </script>
+</body>
+</html>
